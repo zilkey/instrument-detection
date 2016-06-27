@@ -1,5 +1,11 @@
+2016-07-24
+
+- Took https://www.khanacademy.org/math/calculus-home
+
 2016-07-26
 
+- Downloaded all sounds from non-percussion of http://www.philharmonia.co.uk/explore/make_music/violin
+  - Unzipped and added to the `./sounds` directory
 - Googled "python list directory"
   - http://stackoverflow.com/questions/3207219/how-to-list-all-files-of-a-directory-in-python
   - Copy / pasted and tweaked
