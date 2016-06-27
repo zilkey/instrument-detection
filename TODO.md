@@ -1,0 +1,4 @@
+- Write a script that can read the sounds and create a data structure representing the notes, instruments etc...
+- Deal with the fact that there's a lot of silence in the tracks
+- Read all the files in and figure out what the characteristics are
+- Figure out how to get mp3 to WAV files
