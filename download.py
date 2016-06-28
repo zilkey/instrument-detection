@@ -9,15 +9,15 @@ from utils import mkdir_p, chunk
 
 urls = [
     'http://www.philharmonia.co.uk/assets/audio/samples/banjo/banjo.zip',
-    'http://www.philharmonia.co.uk/assets/audio/samples/bass%20clarinet/bass%20clarinet.zip',
+    'http://www.philharmonia.co.uk/assets/audio/samples/bass clarinet/bass clarinet.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/bassoon/bassoon.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/cello/cello.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/clarinet/clarinet.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/contrabassoon/contrabassoon.zip',
-    'http://www.philharmonia.co.uk/assets/audio/samples/cor%20anglais/cor%20anglais.zip',
-    'http://www.philharmonia.co.uk/assets/audio/samples/double%20bass/double%20bass.zip',
+    'http://www.philharmonia.co.uk/assets/audio/samples/cor anglais/cor anglais.zip',
+    'http://www.philharmonia.co.uk/assets/audio/samples/double bass/double bass.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/flute/flute.zip',
-    'http://www.philharmonia.co.uk/assets/audio/samples/french%20horn/french%20horn.zip',
+    'http://www.philharmonia.co.uk/assets/audio/samples/french horn/french horn.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/guitar/guitar.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/mandolin/mandolin.zip',
     'http://www.philharmonia.co.uk/assets/audio/samples/oboe/oboe.zip',
@@ -31,6 +31,7 @@ urls = [
 
 # http://stackoverflow.com/questions/5710867/python-downloading-and-unzipping-a-zip-file-without-writing-to-disk
 def download_and_unzip(url, sounds_path):
+    print "Processing", url
     response = urlopen(url)
     zipdata = StringIO()
     zipdata.write(response.read())
@@ -57,6 +58,7 @@ def download_in_serial():
     for url in urls:
         download_and_unzip(url, sounds_path)
 
+# I sometimes get "not a zipfile" errors here but can't reproduce
 def download_in_parallel():
     sounds_path = "./sounds/mp3"
     wav_path = "./sounds/wav"
@@ -73,4 +75,5 @@ def download_in_parallel():
         thread.join()
 
 if __name__ == '__main__':
-    download_in_serial()
+    # download_in_serial()
+    download_in_parallel()

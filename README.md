@@ -1,1 +1,10 @@
-Download all sounds from http://www.philharmonia.co.uk/explore/make_music/violin and put them in the `/sounds` directory.
+# Setup
+
+Dependencies:
+
+- ffmpeg (`brew install ffmpeg` on a Mac)
+
+```
+python download.py
+python convert.py
+```

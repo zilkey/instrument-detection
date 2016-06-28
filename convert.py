@@ -7,13 +7,13 @@ from utils import mkdir_p, chunk
 
 def convert_paths(paths):
     for path in paths:
-        new_path = string.replace(path, './sounds/', './wav/')
+        new_path = string.replace(path, 'sounds/mp3', 'sounds/wav')
         new_path = string.replace(new_path, '.mp3', '.wav')
         mkdir_p(new_path)
         call(["ffmpeg", "-i", path, new_path, "-y"])
 
 def convert_in_parallel():
-    paths = glob.glob('./sounds/**/*.mp3')
+    paths = glob.glob('./sounds/mp3/**/*.mp3')
     chunks = chunk(paths, cpu_count() * 2)
     processes = []
     for list in chunks:
