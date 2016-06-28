@@ -24,6 +24,8 @@
     - n cores `python convert.py  218.73s user 152.09s system 599% cpu 1:01.90 total`
     - n * 1.5 cores `python convert.py  215.86s user 147.26s system 637% cpu 56.998 total`
     - n * 2 cores ``
+  - http://stackoverflow.com/questions/814167/easiest-way-to-rm-rf-in-python
+  
 
 - Got this email from Keith:
   ```
