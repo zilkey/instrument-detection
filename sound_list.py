@@ -2,7 +2,7 @@ from os import walk
 import glob
 
 def add_to_result(path):
-    parts = path.split("/")[3].split("_")
+    parts = path.split("/")[4].split("_")
     return {
         'path': path,
         'instrument': parts[0],
@@ -13,5 +13,5 @@ def add_to_result(path):
     }
 
 def get_sounds():
-    paths = glob.glob('./sounds/**/*.mp3')
+    paths = glob.glob('./sounds/wav/**/*.wav')
     return map(add_to_result, paths)

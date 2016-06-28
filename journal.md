@@ -1,3 +1,13 @@
+NEXT
+  - goal: _maybe_ figure out matplotlib
+  - definitely figure out how to sample
+  - 💚http://willdrevo.com/fingerprinting-and-audio-recognition-with-python/
+    - https://github.com/worldveil/dejavu/blob/master/dejavu/wavio.py
+  - maybe http://stackoverflow.com/questions/2648151/python-frequency-detection
+  - http://stackoverflow.com/questions/4431481/frequency-detection-from-a-sound-file
+  - http://stackoverflow.com/questions/23377665/python-scipy-fft-wav-files
+  - http://glowingpython.blogspot.com/2011/08/how-to-plot-frequency-spectrum-with.html
+
 2016-07-28
 
 - GOAL: by the end of the night:
@@ -29,6 +39,12 @@
     - `python download.py  4.41s user 4.20s system 5% cpu 2:25.57 total`
   - rewrote it to use threads
     - `python download.py  5.51s user 6.18s system 16% cpu 1:10.71 total`
+
+- Tried to make http://samcarcagno.altervista.org/blog/basic-sound-processing-python/ work
+  - Got really stuck because I just have one channel
+  - http://stackoverflow.com/questions/23154400/read-the-data-of-a-single-channel-from-a-stereo-wave-file-in-python
+  - Took me 2+ hours to realize that I was being too clever, and just copy-pasting from the original worked fine
+  - Couldn't get Matplotlib to work
 
 - Got this email from Keith:
   ```
@@ -103,3 +119,4 @@ Googled a _lot_ and found all of these resources:
 - (I should BUY) https://www.packtpub.com/big-data-and-business-intelligence/building-machine-learning-systems-python
 - http://jack.minardi.org/software/computational-synesthesia/
 - http://willdrevo.com/fingerprinting-and-audio-recognition-with-python/
+- http://colah.github.io/posts/2014-07-Conv-Nets-Modular/
